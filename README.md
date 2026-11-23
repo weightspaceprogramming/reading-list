@@ -4,7 +4,7 @@ An annotated collection of research on representing and constructing programs in
 
 [Read the guide](https://weightspaceprogramming.tech/) · [Search the collection](https://weightspaceprogramming.tech/research/) · [BibTeX](citations.bib) · [JSON](library.json) · [Dated releases](https://github.com/weightspaceprogramming/reading-list/releases)
 
-34 resources. Updated 2026-11-22.
+36 resources. Updated 2026-11-23.
 
 ## Start here
 
@@ -270,6 +270,26 @@ arXiv · 2026-11-19
 A frozen language model writes reusable programs that construct weight updates for trained networks.
 
 [Paper](https://arxiv.org/abs/2611.25476) · [Full text](https://arxiv.org/html/2611.25476v1) · [Code](https://github.com/Gen-Verse/WeightCode) · [Data and experiment artifacts](https://huggingface.co/datasets/Boom5426/WeightCode) · [Research profile](https://weightspaceprogramming.tech/research/weightcode/)
+
+### [Language Models Can Rewrite Their Own Weights](https://arxiv.org/abs/2611.21885)
+
+Jiajun Fan, Neil He, Changyi Yang, Andy Mao, Xi Zhu, Chaoran Cheng, Kaiqu Liang, Shuaike Shen, Zetian Li, Ruihan Guo, Ge Liu.
+
+arXiv · 2026-11-16
+
+Studies a language model writing edits to its own model weights through reasoning, Python code and forward-pass feedback, with evaluations of self-improvement and repair of corrupted copies.
+
+[Paper](https://arxiv.org/abs/2611.21885) · [Full text](https://arxiv.org/html/2611.21885v2) · [Project](https://www.jiajunfan.com/projects/self-rewriting/) · [Research profile](https://weightspaceprogramming.tech/research/language-models-rewrite-own-weights/)
+
+### [Keel: A Frontier Model Teaches a Vision-Language Model by Rewriting Its Weights](https://arxiv.org/abs/2611.25257)
+
+Jiajun Fan, Neil He, Bangji Yang, Qinglong Zheng, Ziwen Wang, Chaoran Cheng, Changyi Yang, Hanqi Mao, Ge Liu.
+
+arXiv · 2026-11-18
+
+Uses a multimodal LLM editor to diagnose repetitive thinking in vision-language models and write weight repairs, guided by failing images, hidden states and evaluation feedback.
+
+[Paper](https://arxiv.org/abs/2611.25257) · [Full text](https://arxiv.org/html/2611.25257v1) · [Research profile](https://weightspaceprogramming.tech/research/keel/)
 
 ## Replications, criticism and responses
 

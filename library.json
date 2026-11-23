@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "entries": [
     {
       "id": "hypernetworks",
@@ -1548,6 +1548,131 @@
       ],
       "featured": false,
       "bibtex": "@misc{sparks-response-to-comments,\n  title = {{Sparks of Weight-Space Programming: Response to Comments}},\n  author = {Takehi, Rikiya and Teoh, Jayden and Zhang, Alex and Khattab, Omar},\n  year = {2026},\n  date = {2026-11-12},\n  howpublished = {Update to Sparks of Weight-Space Programming},\n  url = {https://rikiyat.github.io/blog/weight-space-programming/}\n}\n"
+    },
+    {
+      "id": "language-models-rewrite-own-weights",
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "authors": [
+        "Jiajun Fan",
+        "Neil He",
+        "Changyi Yang",
+        "Andy Mao",
+        "Xi Zhu",
+        "Chaoran Cheng",
+        "Kaiqu Liang",
+        "Shuaike Shen",
+        "Zetian Li",
+        "Ruihan Guo",
+        "Ge Liu"
+      ],
+      "date": "2026-11-16",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "edit"
+      ],
+      "artifacts": [
+        "code",
+        "network"
+      ],
+      "en": {
+        "summary": "Studies a language model writing edits to its own model weights through reasoning, Python code and forward-pass feedback, with evaluations of self-improvement and repair of corrupted copies.",
+        "construction": "A fixed Qwen3.5 editor instance inspects weight tensors, graded practice answers and hidden states, then writes and tests candidate weight edits.",
+        "training": "The editing session blocks gradients and optimizers. The editor uses its existing pretrained weights; candidate edits are evaluated through forward passes.",
+        "execution": "The selected weight changes are loaded into the target model for subsequent inference."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.21885",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.21885v2",
+          "kind": "source"
+        },
+        {
+          "label": "Project",
+          "url": "https://www.jiajunfan.com/projects/self-rewriting/",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{languagemodelsrewriteownweights,\n  title = {{Language Models Can Rewrite Their Own Weights}},\n  author = {Fan, Jiajun and He, Neil and Yang, Changyi and Mao, Andy and Zhu, Xi and Cheng, Chaoran and Liang, Kaiqu and Shen, Shuaike and Li, Zetian and Guo, Ruihan and Liu, Ge},\n  year = {2026},\n  date = {2026-11-16},\n  eprint = {2611.21885},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.21885}\n}\n",
+      "profile": [
+        {
+          "title": "Editing and evaluation",
+          "html": "<p>The study compares Qwen3.5 models from 2B to 27B parameters. In the repair experiment, the undamaged model edits a corrupted copy. The 27B sessions test edits on practice mathematics before evaluation on held-out problems; every session starts from the base weights.</p>"
+        },
+        {
+          "title": "Connection to Program-as-Weights",
+          "html": "<p>Both methods produce persistent changes through model weights. <a href=\"/research/program-as-weights/\">PAW</a> specifically trains a neural compiler to generate LoRA adapters that edit a frozen interpreter’s weights from a natural-language function specification. Self-rewriting uses a general-purpose LLM, not specifically trained for this purpose, to write and test edits to its own model weights.</p>"
+        }
+      ]
+    },
+    {
+      "id": "keel",
+      "title": "Keel: A Frontier Model Teaches a Vision-Language Model by Rewriting Its Weights",
+      "authors": [
+        "Jiajun Fan",
+        "Neil He",
+        "Bangji Yang",
+        "Qinglong Zheng",
+        "Ziwen Wang",
+        "Chaoran Cheng",
+        "Changyi Yang",
+        "Hanqi Mao",
+        "Ge Liu"
+      ],
+      "date": "2026-11-18",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "edit"
+      ],
+      "artifacts": [
+        "code",
+        "network"
+      ],
+      "en": {
+        "summary": "Uses a multimodal LLM editor to diagnose repetitive thinking in vision-language models and write weight repairs, guided by failing images, hidden states and evaluation feedback.",
+        "construction": "A failure census and visual inspection tools guide independent editing sessions. A held-out practice set selects edits that reduce unfinished answers and improve accuracy.",
+        "training": "The editing harness blocks gradients, optimizers and iterative fitting to a loss. The editor reasons over pretrained weights and forward-pass results.",
+        "execution": "Qwen3.5-0.8B and 2B run with the selected weight edits. Deployment combines edits with budget forcing when held-out evaluation selects that combination."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.25257",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.25257v1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{keel,\n  title = {{Keel: A Frontier Model Teaches a Vision-Language Model by Rewriting Its Weights}},\n  author = {Fan, Jiajun and He, Neil and Yang, Bangji and Zheng, Qinglong and Wang, Ziwen and Cheng, Chaoran and Yang, Changyi and Mao, Hanqi and Liu, Ge},\n  year = {2026},\n  date = {2026-11-18},\n  eprint = {2611.25257},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.25257}\n}\n",
+      "profile": [
+        {
+          "title": "Vision-language model repair",
+          "html": "<p>The editor inspects practice images, attention maps and the effect of replacing an image with a blank image. The paper evaluates repairs across visual mathematics, multimodal reasoning, hallucination, object probing and GUI grounding. Independent editors locate repetitive behavior in middle-layer attention outputs.</p>"
+        },
+        {
+          "title": "Connection to Program-as-Weights",
+          "html": "<p>Keel and <a href=\"/research/program-as-weights/\">PAW</a> change model behavior through weights. PAW specifically trains a neural compiler to generate LoRA adapters that edit a frozen interpreter’s weights from a function specification. Keel uses a general-purpose multimodal LLM, not specifically trained for this purpose, to diagnose failures and write weight repairs through an interactive editing session.</p>"
+        }
+      ]
     }
   ]
 }

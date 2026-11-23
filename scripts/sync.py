@@ -23,7 +23,7 @@ GROUPS = [
         "weightloop", "exploring-weight-space-programming", "weight-space-policy-verification",
         "interpretable-weight-space-programming", "weightbench", "zero-shot-structured-data",
         "weight-space-tractor-control", "weight-space-diffusion-editing",
-        "weight-space-without-transformers", "weightcode",
+        "weight-space-without-transformers", "weightcode", "language-models-rewrite-own-weights", "keel",
     ]),
     ("Replications, criticism and responses", [
         "honnibal-sparks-critique", "goedecke-superhuman-critique", "willison-local-weight-reading",
