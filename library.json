@@ -347,7 +347,7 @@
           "kind": "paper"
         },
         {
-          "label": "Python SDK",
+          "label": "Official Python SDK",
           "url": "https://github.com/programasweights/programasweights-python",
           "kind": "code"
         },
@@ -372,7 +372,7 @@
           "kind": "demo"
         },
         {
-          "label": "Local compiler",
+          "label": "Official local compiler",
           "url": "https://github.com/programasweights/compiler",
           "kind": "code"
         },
