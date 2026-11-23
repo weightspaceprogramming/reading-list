@@ -1,0 +1,1553 @@
+{
+  "updated": "2026-11-22",
+  "entries": [
+    {
+      "id": "hypernetworks",
+      "title": "HyperNetworks",
+      "authors": [
+        "David Ha",
+        "Andrew Dai",
+        "Quoc V. Le"
+      ],
+      "date": "2016-09-27",
+      "kind": "paper",
+      "venue": "ICLR 2017",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Uses one neural network to generate the weights of another.",
+        "construction": "A trained network generates the parameters of another network.",
+        "training": "The weight generator is trained jointly with the target network.",
+        "execution": "The target network runs with the generated weights."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/1609.09106",
+          "kind": "paper"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@inproceedings{hypernetworks,\n  title = {{HyperNetworks}},\n  author = {Ha, David and Dai, Andrew and Le, Quoc V.},\n  year = {2017},\n  booktitle = {International Conference on Learning Representations},\n  url = {https://arxiv.org/abs/1609.09106}\n}\n"
+    },
+    {
+      "id": "hypter",
+      "title": "Learning to Generate Task-Specific Adapters from Task Description",
+      "authors": [
+        "Qinyuan Ye",
+        "Xiang Ren"
+      ],
+      "date": "2021-01-02",
+      "kind": "paper",
+      "venue": "ACL-IJCNLP 2021",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "Introduces Hypter, which generates adapters from natural-language task descriptions.",
+        "construction": "A description encoder and hypernetwork generate adapters for a text-to-text model.",
+        "training": "The generator learns from tasks with descriptions and labeled examples.",
+        "execution": "BART performs the task with the generated adapters."
+      },
+      "links": [
+        {
+          "label": "Published paper",
+          "url": "https://aclanthology.org/2021.acl-short.82/",
+          "kind": "paper"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2101.00420",
+          "kind": "paper"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/INK-USC/hypter",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@inproceedings{hypter,\n  title = {{Learning to Generate Task-Specific Adapters from Task Description}},\n  author = {Ye, Qinyuan and Ren, Xiang},\n  year = {2021},\n  booktitle = {Proceedings of the 59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)},\n  pages = {646--653},\n  publisher = {Association for Computational Linguistics},\n  url = {https://aclanthology.org/2021.acl-short.82/}\n}\n"
+    },
+    {
+      "id": "hypertuning",
+      "title": "HyperTuning: Toward Adapting Large Language Models without Back-propagation",
+      "authors": [
+        "Jason Phang",
+        "Yi Mao",
+        "Pengcheng He",
+        "Weizhu Chen"
+      ],
+      "date": "2022-11-22",
+      "kind": "paper",
+      "venue": "ICML 2023",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "Produces task-specific parameters for a frozen language model from a few demonstrations.",
+        "construction": "HyperT5 generates prefix or LoRA parameters from task demonstrations.",
+        "training": "Hyperpretraining and multitask training prepare the generator; the paper also studies further task-specific tuning.",
+        "execution": "A frozen T5 model runs with the generated parameters."
+      },
+      "links": [
+        {
+          "label": "Published paper",
+          "url": "https://proceedings.mlr.press/v202/phang23a.html",
+          "kind": "paper"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2211.12485",
+          "kind": "paper"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@inproceedings{hypertuning,\n  title = {{HyperTuning: Toward Adapting Large Language Models without Back-propagation}},\n  author = {Phang, Jason and Mao, Yi and He, Pengcheng and Chen, Weizhu},\n  year = {2023},\n  booktitle = {Proceedings of the 40th International Conference on Machine Learning},\n  volume = {202},\n  pages = {27854--27875},\n  series = {Proceedings of Machine Learning Research},\n  publisher = {PMLR},\n  url = {https://proceedings.mlr.press/v202/phang23a.html}\n}\n"
+    },
+    {
+      "id": "hint",
+      "title": "HINT: Hypernetwork Instruction Tuning for Efficient Zero- & Few-Shot Generalisation",
+      "authors": [
+        "Hamish Ivison",
+        "Akshita Bhagia",
+        "Yizhong Wang",
+        "Hannaneh Hajishirzi",
+        "Matthew Peters"
+      ],
+      "date": "2022-12-20",
+      "kind": "paper",
+      "venue": "ACL 2023",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "Turns instructions and examples into reusable prefixes, adapters, and encoded instruction representations.",
+        "construction": "An instruction-conditioned hypernetwork generates modules, and instruction fusion caches the instruction representation.",
+        "training": "Instruction tuning trains the generator and model to generalize across tasks.",
+        "execution": "An encoder-decoder model uses the generated modules and attends to cached instruction representations."
+      },
+      "links": [
+        {
+          "label": "Published paper",
+          "url": "https://aclanthology.org/2023.acl-long.631/",
+          "kind": "paper"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2212.10315",
+          "kind": "paper"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@inproceedings{hint,\n  title = {{HINT: Hypernetwork Instruction Tuning for Efficient Zero- \\& Few-Shot Generalisation}},\n  author = {Ivison, Hamish and Bhagia, Akshita and Wang, Yizhong and Hajishirzi, Hannaneh and Peters, Matthew},\n  year = {2023},\n  booktitle = {Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},\n  pages = {11272--11288},\n  publisher = {Association for Computational Linguistics},\n  doi = {10.18653/v1/2023.acl-long.631},\n  url = {https://aclanthology.org/2023.acl-long.631/}\n}\n"
+    },
+    {
+      "id": "tracr",
+      "title": "Tracr: Compiled Transformers as a Laboratory for Interpretability",
+      "authors": [
+        "David Lindner",
+        "János Kramár",
+        "Sebastian Farquhar",
+        "Matthew Rahtz",
+        "Thomas McGrath",
+        "Vladimir Mikulik"
+      ],
+      "date": "2023-01-12",
+      "kind": "paper",
+      "venue": "NeurIPS 2023",
+      "mechanisms": [
+        "formal"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Compiles RASP programs into transformer weights with known computational structure.",
+        "construction": "A symbolic compiler translates each RASP operation into network components and assembles their weights.",
+        "training": "Compilation constructs the weights without model training. A separate experiment trains a projection to compress the compiled model.",
+        "execution": "The compiled transformer executes the specified sequence computation."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2301.05062",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2301.05062",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/google-deepmind/tracr",
+          "kind": "code"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@inproceedings{NEURIPS2023_771155ab,\n author = {Lindner, David and Kramár, János and Farquhar, Sebastian and Rahtz, Matthew and McGrath, Thomas and Mikulik, Vladimir},\n booktitle = {Advances in Neural Information Processing Systems},\n doi = {10.52202/075280-1649},\n editor = {A. Oh and T. Naumann and A. Globerson and K. Saenko and M. Hardt and S. Levine},\n pages = {37876--37899},\n publisher = {Curran Associates, Inc.},\n title = {Tracr: Compiled Transformers as a Laboratory for Interpretability},\n url = {https://arxiv.org/abs/2301.05062},\n volume = {36},\n year = {2023}\n}\n"
+    },
+    {
+      "id": "text-to-lora",
+      "title": "Text-to-LoRA: Instant Transformer Adaption",
+      "authors": [
+        "Rujikorn Charakorn",
+        "Edoardo Cetin",
+        "Yujin Tang",
+        "Robert Tjarko Lange"
+      ],
+      "date": "2025-06-06",
+      "kind": "paper",
+      "venue": "ICML 2025",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "Uses a hypernetwork to generate LoRA adapters from task descriptions.",
+        "construction": "A hypernetwork maps the task description to LoRA matrices.",
+        "training": "The paper trains generators by reconstructing adapters and through supervised task learning.",
+        "execution": "A base transformer performs the task with the generated LoRA."
+      },
+      "links": [
+        {
+          "label": "Published paper",
+          "url": "https://proceedings.mlr.press/v267/charakorn25a.html",
+          "kind": "paper"
+        },
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2506.06105",
+          "kind": "paper"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/SakanaAI/text-to-lora",
+          "kind": "code"
+        },
+        {
+          "label": "Model checkpoints",
+          "url": "https://huggingface.co/SakanaAI/text-to-lora",
+          "kind": "model"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@inproceedings{text-to-lora,\n  title = {{Text-to-LoRA: Instant Transformer Adaption}},\n  author = {Charakorn, Rujikorn and Cetin, Edoardo and Tang, Yujin and Lange, Robert Tjarko},\n  year = {2025},\n  booktitle = {Proceedings of the 42nd International Conference on Machine Learning},\n  volume = {267},\n  pages = {7485--7514},\n  series = {Proceedings of Machine Learning Research},\n  publisher = {PMLR},\n  url = {https://proceedings.mlr.press/v267/charakorn25a.html}\n}\n"
+    },
+    {
+      "id": "code-to-lora",
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "authors": [
+        "Liliana Hotsko",
+        "Yinxi Li",
+        "Yuntian Deng",
+        "Pengyu Nie"
+      ],
+      "date": "2026-06-04",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "Trains a hypernetwork to generate repository-specific LoRA adapters from source code and update them as commits arrive.",
+        "construction": "Static maps an encoded repository snapshot to LoRA weights. Evo updates a GRU state with each commit diff and generates the weights from that state.",
+        "training": "The hypernetwork learns across repositories through the frozen code model’s assertion-completion loss. New repositories receive generated adapters without per-repository fine-tuning.",
+        "execution": "The code model uses the generated adapter without adding repository context tokens to each request."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2606.06492",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2606.06492v2",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{code-to-lora,\n  title = {{Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution}},\n  author = {Hotsko, Liliana and Li, Yinxi and Deng, Yuntian and Nie, Pengyu},\n  year = {2026},\n  date = {2026-06-04},\n  eprint = {2606.06492},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2606.06492}\n}\n"
+    },
+    {
+      "id": "program-as-weights",
+      "title": "Program-as-Weights: A Programming Paradigm for Fuzzy Functions",
+      "authors": [
+        "Wentao Zhang",
+        "Liliana Hotsko",
+        "Woojeong Kim",
+        "Pengyu Nie",
+        "Stuart Shieber",
+        "Yuntian Deng"
+      ],
+      "date": "2026-07-02",
+      "kind": "paper",
+      "venue": "NeurIPS 2026",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter",
+        "program"
+      ],
+      "en": {
+        "summary": "Proposes fuzzy-function programming: compile a natural-language function specification into a neural program, then reuse it locally. Establishes a compiler–interpreter interface and releases FuzzyBench.",
+        "construction": "A large trained compiler produces a neural program from the function specification. Its fast compiler generates LoRA weights in one forward pass.",
+        "training": "PAW specifically trains a neural compiler to generate programs. New functions compile without per-function gradient descent.",
+        "execution": "A frozen lightweight interpreter loads the program and runs new inputs locally."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2607.02512",
+          "kind": "paper"
+        },
+        {
+          "label": "Python SDK",
+          "url": "https://github.com/programasweights/programasweights-python",
+          "kind": "code"
+        },
+        {
+          "label": "SDK reference",
+          "url": "https://programasweights.readthedocs.io/en/latest/api-reference/python-sdk/",
+          "kind": "guide"
+        },
+        {
+          "label": "Original full text",
+          "url": "https://arxiv.org/html/2607.02512v1",
+          "kind": "source"
+        },
+        {
+          "label": "Project",
+          "url": "https://programasweights.com",
+          "kind": "source"
+        },
+        {
+          "label": "Demo",
+          "url": "https://programasweights.com/playground",
+          "kind": "demo"
+        },
+        {
+          "label": "Local compiler",
+          "url": "https://github.com/programasweights/compiler",
+          "kind": "code"
+        },
+        {
+          "label": "Current full text",
+          "url": "https://arxiv.org/html/2607.02512v2",
+          "kind": "source"
+        },
+        {
+          "label": "Standard compiler checkpoint",
+          "url": "https://huggingface.co/programasweights/paw-4b-qwen3-0.6b",
+          "kind": "model"
+        },
+        {
+          "label": "Compact compiler checkpoint",
+          "url": "https://huggingface.co/programasweights/paw-4b-gpt2",
+          "kind": "model"
+        },
+        {
+          "label": "Qwen3-0.6B interpreter",
+          "url": "https://huggingface.co/programasweights/Qwen3-0.6B-GGUF-Q6_K",
+          "kind": "model"
+        },
+        {
+          "label": "GPT-2 interpreter",
+          "url": "https://huggingface.co/programasweights/GPT2-GGUF-Q8_0",
+          "kind": "model"
+        },
+        {
+          "label": "FuzzyBench verified evaluation data",
+          "url": "https://huggingface.co/datasets/yuntian-deng/fuzzy_bench_verified",
+          "kind": "dataset"
+        },
+        {
+          "label": "FuzzyBench train, validation and test data",
+          "url": "https://huggingface.co/datasets/wtzhang-nlp/fuzzy_bench",
+          "kind": "dataset"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@inproceedings{zhang2026programasweights,\n  title = { {Program-as-Weights: A Programming Paradigm for Fuzzy Functions} },\n  author = {Zhang, Wentao and Hotsko, Liliana and Kim, Woojeong and Nie, Pengyu and Shieber, Stuart and Deng, Yuntian},\n  year = {2026},\n  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},\n  url = {https://arxiv.org/abs/2607.02512}\n}\n",
+      "profile": [
+        {
+          "title": "A programming interface for fuzzy functions",
+          "html": "<p>PAW makes a function specification into a saved, reusable neural program. The program combines a readable pseudo-program with learned adapter weights; a frozen interpreter executes it on new inputs. The paper demonstrates log monitoring, intent navigation, semantic reranking, tool routing and a word game.</p>"
+        },
+        {
+          "title": "The compiler and the interpreter",
+          "html": "<p>PAW specifically trains a neural compiler to generate LoRA adapters that edit the frozen interpreter’s weights. The <a href=\"/research/sparks-weight-space-programming/\">Sparks experiments</a> use a general-purpose LLM, not specifically trained for this purpose, to reason about and edit weights. Both produce computations represented in weights, through different construction methods.</p>"
+        },
+        {
+          "title": "Compile and run a function",
+          "html": "<p>The <a href=\"https://github.com/programasweights/compiler\">local compiler</a> exports a <code>.paw</code> file for the <a href=\"https://github.com/programasweights/programasweights-python\">Python SDK</a>. Compilation requires a BF16-capable NVIDIA GPU; the repository recommends 16 GB of GPU memory. The compiler and reference model run sequentially. The interpreter is downloaded once for local execution.</p><p><a href=\"https://huggingface.co/programasweights/paw-4b-qwen3-0.6b\">Standard</a> targets Qwen3-0.6B; <a href=\"https://huggingface.co/programasweights/paw-4b-gpt2\">Compact</a> targets a GPT-2 interpreter with extended positional embeddings. Each checkpoint contains the trained compiler and LoRA mapper, not the interpreter. Use the matching runtime linked below. Start with the <a href=\"/build/reusable-neural-function/\">builder guide</a>, <a href=\"https://programasweights.readthedocs.io/en/latest/api-reference/python-sdk/\">SDK reference</a> or <a href=\"https://programasweights.com/playground\">playground</a>.</p>"
+        },
+        {
+          "title": "Data and evaluation",
+          "html": "<p>The <a href=\"https://huggingface.co/datasets/yuntian-deng/fuzzy_bench_verified\">verified evaluation repository</a> contains <code>test</code> and <code>test_clean</code> splits with specification, input and output fields. The <a href=\"https://huggingface.co/datasets/wtzhang-nlp/fuzzy_bench\">separate dataset release</a> contains training, validation and test splits. Test new functions on held-out inputs, then test their composition with ordinary code; see the <a href=\"/analysis/evaluating-results/\">evaluation guide</a>.</p>"
+        }
+      ]
+    },
+    {
+      "id": "compile-by-training",
+      "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+      "authors": [
+        "Yuntian Deng",
+        "Pengyu Nie",
+        "Stuart Shieber"
+      ],
+      "date": "2026-09-03",
+      "kind": "paper",
+      "venue": "EMNLP 2026 System Demonstrations",
+      "mechanisms": [
+        "trained",
+        "optimization"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter",
+        "program"
+      ],
+      "en": {
+        "summary": "Compiles a function description into a reusable local program by generating training examples and optimizing an adapter.",
+        "construction": "Teacher models generate examples from the specification. Gradient descent refines the adapter initialized by PAW’s fast compiler.",
+        "training": "Training happens at function compilation; the saved program runs without the teachers.",
+        "execution": "A frozen Qwen3-0.6B interpreter runs the saved function locally without further teacher calls."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://aclanthology.org/2026.emnlp-demos.78/",
+          "kind": "paper"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/programasweights/compile-by-training",
+          "kind": "code"
+        },
+        {
+          "label": "Original full text",
+          "url": "https://arxiv.org/html/2609.04199v1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@inproceedings{deng-etal-2026-compile,\n  title = { {Compile by Training: Turning Natural-Language Specifications into Local Neural Functions} },\n  author = {Deng, Yuntian and Nie, Pengyu and Shieber, Stuart},\n  year = {2026},\n  booktitle = {Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing: System Demonstrations},\n  publisher = {Association for Computational Linguistics},\n  pages = {830--839},\n  doi = {10.18653/2026.emnlp-demos.78},\n  month = {October},\n  address = {Budapest, Hungary},\n  isbn = {979-8-89176-461-3},\n  editor = {Agrawal, Sweta and Abad, Alberto},\n  url = {https://aclanthology.org/2026.emnlp-demos.78/}\n}\n"
+    },
+    {
+      "id": "sparks-weight-space-programming",
+      "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
+      "authors": [
+        "Rikiya Takehi",
+        "Jayden Teoh",
+        "Alex Zhang",
+        "Omar Khattab"
+      ],
+      "date": "2026-11-02",
+      "kind": "article",
+      "venue": "Research article",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "A general-purpose LLM reads numerical weights, constructs networks, and edits a language model. Tool access varies by experiment, from no tools to Python and limited model executions.",
+        "construction": "The LLM reasons about the computation and writes the numerical parameters. Larger experiments use a Python environment and forward-pass feedback.",
+        "training": "The general-purpose LLM is not specifically trained for this purpose. The reported construction and editing procedures prohibit gradient descent and training loops.",
+        "execution": "The constructed or edited network runs on new inputs."
+      },
+      "links": [
+        {
+          "label": "Original article",
+          "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+          "kind": "source"
+        },
+        {
+          "label": "Experiment logs and code",
+          "url": "https://github.com/RikiyaT/lm_understand-logs",
+          "kind": "code"
+        },
+        {
+          "label": "Edited Qwen model",
+          "url": "https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming",
+          "kind": "model"
+        },
+        {
+          "label": "Community model-comparison demo",
+          "url": "https://huggingface.co/spaces/akhaliq/weight-space-programming-demo",
+          "kind": "demo"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@misc{sparks-weight-space-programming,\n  title = {{Sparks of Weight-Space Programming: LLMs can natively read \\& write neural network weights}},\n  author = {Takehi, Rikiya and Teoh, Jayden and Zhang, Alex and Khattab, Omar},\n  year = {2026},\n  date = {2026-11-02},\n  howpublished = {Research article},\n  url = {https://rikiyat.github.io/blog/weight-space-programming/}\n}\n",
+      "profile": [
+        {
+          "title": "Read, construct and edit",
+          "html": "<p>Published on November 2, 2026, Sparks presents three operations: infer behavior from weights, write a network for a task, and modify an existing network. It connects small-network examples with language-model analysis and repair.</p><p>Its general-purpose LLM is not specifically trained for this purpose. <a href=\"/research/program-as-weights/\">PAW</a> specifically trains a compiler to generate programs; <a href=\"/research/tracr/\">Tracr</a> constructs weights through formal compilation. The shared subject is programming neural computation through weights.</p>"
+        },
+        {
+          "title": "Read the experimental conditions separately",
+          "html": "<p>Game identification and small-network construction use no tools. Language identification permits Python but no model forward pass. Go construction and Qwen repair permit Python and bounded forward-pass feedback. Qwen repair targets repetition loops in a specified model and evaluation setting.</p><p>The <a href=\"https://github.com/RikiyaT/lm_understand-logs\">released logs</a> include prompts, model responses, sandbox code, evaluations and network artifacts. The <a href=\"https://huggingface.co/RikiyaT/Qwen3.5-0.8B-weight-space-programming\">edited checkpoint</a> documents the weight changes. A <a href=\"https://huggingface.co/spaces/akhaliq/weight-space-programming-demo\">community demo</a> compares base and edited outputs.</p>"
+        },
+        {
+          "title": "Responses and independent tests",
+          "html": "<p><a href=\"/research/honnibal-sparks-critique/\">Matthew Honnibal</a> challenges combining different tool and feedback conditions into one capability claim. <a href=\"/research/goedecke-superhuman-critique/\">Sean Goedecke</a> questions the superhuman-research interpretation. The authors’ <a href=\"/research/sparks-response-to-comments/\">November 12 response</a> explains their broader framing and addresses experimental comparisons.</p><p><a href=\"/research/willison-local-weight-reading/\">Simon Willison</a> repeats game identification with a local model. <a href=\"/research/replicating-weight-space-programming/\">Goworek and colleagues</a> test changed games, code-policy controls and shuffled weights. Read the <a href=\"/analysis/sparks-experiments/\">experiment analysis</a> for the connections between these results.</p>"
+        }
+      ]
+    },
+    {
+      "id": "weight-space-programming-simple-tasks",
+      "title": "Weight-Space Programming from scratch on simple tasks",
+      "authors": [
+        "Chandan Singh"
+      ],
+      "date": "2026-11-02",
+      "kind": "article",
+      "venue": "Research article",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "An LLM coding agent writes transformer weights for tasks such as addition, sorting, and parity, then revises the programs using evaluation feedback.",
+        "construction": "The agent edits the architecture and parameter-setting code, runs the resulting model, and simplifies successful programs.",
+        "training": "The algorithmic-task procedure uses closed-form parameter assignment. The report identifies fitting and evaluation leakage in its language-task runs.",
+        "execution": "The written transformer generates its answer token by token."
+      },
+      "links": [
+        {
+          "label": "Original article",
+          "url": "https://csinva.io/weight-space-programming-autoresearch/analyze/toy_examples/report.html",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/csinva/weight-space-programming-autoresearch",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weight-space-programming-simple-tasks,\n  title = {{Weight-Space Programming from scratch on simple tasks}},\n  author = {Singh, Chandan},\n  year = {2026},\n  date = {2026-11-02},\n  howpublished = {Research article},\n  url = {https://csinva.io/weight-space-programming-autoresearch/analyze/toy_examples/report.html}\n}\n"
+    },
+    {
+      "id": "weight-reading-audit",
+      "title": "Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids? Exploring \"Weight-Space Programming\"",
+      "authors": [
+        "Nazmus Sakib Ahmed"
+      ],
+      "date": "2026-11-05",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read"
+      ],
+      "artifacts": [],
+      "en": {
+        "summary": "Audits whether zero-shot neural-weight interpretation reflects computation tracing or local arithmetic and familiar-dataset priors.",
+        "construction": "The language model describes network behavior; controlled label permutations and unfamiliar datasets test those interpretations.",
+        "training": "The tested networks are trained beforehand. The weight-reading sessions perform no training or model execution.",
+        "execution": "No replacement network is produced; the study evaluates the validity of the model’s explanations."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.08070",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.08070v1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weight-reading-audit,\n  title = {{Can an LLM Actually Reason and Program about Neural Network's Weights or is it just memorization on steroids? Exploring \"Weight-Space Programming\"}},\n  author = {Ahmed, Nazmus Sakib},\n  year = {2026},\n  date = {2026-11-05},\n  eprint = {2611.08070},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.08070}\n}\n"
+    },
+    {
+      "id": "weightloop",
+      "title": "WeightLoop: Weight-Space Programming with Experimental Feedback",
+      "authors": [
+        "Mengran Li",
+        "Bo Li",
+        "Weijing Zhao",
+        "Chengyang Zhang",
+        "Boyu Zhang",
+        "Jinfeng Xu",
+        "Zelin Zang",
+        "Victor C. M. Leung",
+        "Stan Z. Li"
+      ],
+      "date": "2026-11-05",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning",
+        "optimization"
+      ],
+      "operations": [
+        "edit"
+      ],
+      "artifacts": [
+        "program",
+        "code",
+        "network"
+      ],
+      "en": {
+        "summary": "Builds reusable update programs that turn experimental measurements into persistent corrections to scientific predictors.",
+        "construction": "An LLM writes an editor that estimates parameter corrections, validates candidates on feedback folds, and saves accepted changes.",
+        "training": "The editor fits corrections from measured feedback; its numerical fitting is distinct from the LLM session that writes the editor.",
+        "execution": "The updated predictor makes subsequent predictions; the editor can process later experimental feedback."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.07319",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.07319v2",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/limengran98/WeightLoop",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weightloop,\n  title = {{WeightLoop: Weight-Space Programming with Experimental Feedback}},\n  author = {Li, Mengran and Li, Bo and Zhao, Weijing and Zhang, Chengyang and Zhang, Boyu and Xu, Jinfeng and Zang, Zelin and Leung, Victor C. M. and Li, Stan Z.},\n  year = {2026},\n  date = {2026-11-05},\n  eprint = {2611.07319},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.07319}\n}\n"
+    },
+    {
+      "id": "exploring-weight-space-programming",
+      "title": "Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations",
+      "authors": [
+        "Junru Hu",
+        "Cheng Tang",
+        "Wei Li",
+        "Hongze Zhu",
+        "Chun-Mei Feng",
+        "Qi Zhang",
+        "Yirong Chen",
+        "Ming Hu"
+      ],
+      "date": "2026-11-06",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Studies direct weight editing across 16 searches, seven benchmark families, and two model scales, measuring held-out gains and transfer between tasks.",
+        "construction": "A reasoning agent inspects parameters, writes weight updates, and selects a checkpoint using development feedback.",
+        "training": "The editing search uses no gradient-based optimization. Each search has a budget of 50 successful forward-tool requests.",
+        "execution": "The selected checkpoint answers held-out questions without the editing agent."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.09382",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.09382v1",
+          "kind": "source"
+        },
+        {
+          "label": "Project repository",
+          "url": "https://github.com/WSP-Scope/WSP-Scope-Project",
+          "kind": "code"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@misc{exploring-weight-space-programming,\n  title = {{Exploring Weight-Space Programming: Capabilities, Generalization, and Limitations}},\n  author = {Hu, Junru and Tang, Cheng and Li, Wei and Zhu, Hongze and Feng, Chun-Mei and Zhang, Qi and Chen, Yirong and Hu, Ming},\n  year = {2026},\n  date = {2026-11-06},\n  eprint = {2611.09382},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.09382}\n}\n"
+    },
+    {
+      "id": "weight-space-policy-verification",
+      "title": "Weight-Space Programming of Policies and Their Verification via Model Checking",
+      "authors": [
+        "Dennis Gross"
+      ],
+      "date": "2026-11-08",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Combines LLM-written neural policies with probabilistic model checking and feedback-driven repair.",
+        "construction": "The LLM writes policy weights and revises them using optional action examples and model-checking feedback.",
+        "training": "Weight writing and repair use no gradient descent. Storm computes satisfaction probabilities for the modeled environment.",
+        "execution": "The neural policy selects actions; verification applies to the specified environment model and requirement."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.11604",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.11604v1",
+          "kind": "source"
+        },
+        {
+          "label": "Code: WSP branch",
+          "url": "https://github.com/LAVA-LAB/COOL-MC/tree/wsp_verified",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weight-space-policy-verification,\n  title = {{Weight-Space Programming of Policies and Their Verification via Model Checking}},\n  author = {Gross, Dennis},\n  year = {2026},\n  date = {2026-11-08},\n  eprint = {2611.11604},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.11604}\n}\n"
+    },
+    {
+      "id": "interpretable-weight-space-programming",
+      "title": "Interpretable weight-space programming builds transparent transformers and brain encoding models",
+      "authors": [
+        "Yash Mehta",
+        "Chandan Singh",
+        "Weijia Xu",
+        "Richard J. Antonello",
+        "Adeen Flinker",
+        "Nima Mesgarani",
+        "Michael F. Bonner",
+        "Nebojsa Jojic",
+        "Jianfeng Gao"
+      ],
+      "date": "2026-11-13",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "An LLM agent constructs interpretable transformers and brain-encoding features by writing their computations and weights in code.",
+        "construction": "The agent revises explicit computations and weights, then audits their interpretability and tests reconstruction from short descriptions.",
+        "training": "The agent-written model forbids backpropagation and pretrained weights. Brain-encoding evaluation separately fits a ridge-regression readout.",
+        "execution": "The constructed model predicts task outputs or brain responses without the writing agent."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.18114",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.18114v1",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/csinva/weight-space-programming-autoresearch",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{interpretable-weight-space-programming,\n  title = {{Interpretable weight-space programming builds transparent transformers and brain encoding models}},\n  author = {Mehta, Yash and Singh, Chandan and Xu, Weijia and Antonello, Richard J. and Flinker, Adeen and Mesgarani, Nima and Bonner, Michael F. and Jojic, Nebojsa and Gao, Jianfeng},\n  year = {2026},\n  date = {2026-11-13},\n  eprint = {2611.18114},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.18114}\n}\n"
+    },
+    {
+      "id": "weightbench",
+      "title": "WeightBench: Evaluating Language Models as Weight-Space Programmers",
+      "authors": [
+        "Aayush Marasini",
+        "Barsat Khadka",
+        "Nick Rahimi"
+      ],
+      "date": "2026-11-13",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Evaluates language-model agents on 42 tasks covering weight reading, repair, construction, impossible edits, and data-free compression.",
+        "construction": "An agent inspects parameters and submits answers or edited networks inside an operating-system sandbox.",
+        "training": "The benchmark restricts optimization and meters permitted forward-pass access; task results are scored under fixed budgets.",
+        "execution": "The benchmark evaluates the submitted artifact on the task requirements."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.18553",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.18553v1",
+          "kind": "source"
+        },
+        {
+          "label": "Code and benchmark",
+          "url": "https://github.com/Aayush-Marasini/WeightBench",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weightbench,\n  title = {{WeightBench: Evaluating Language Models as Weight-Space Programmers}},\n  author = {Marasini, Aayush and Khadka, Barsat and Rahimi, Nick},\n  year = {2026},\n  date = {2026-11-13},\n  eprint = {2611.18553},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.18553}\n}\n"
+    },
+    {
+      "id": "zero-shot-structured-data",
+      "title": "Zero-Shot Weight-Space Programming for Prediction and Classification of Target Variables in Structured Datasets",
+      "authors": [
+        "Eduardo C. Garrido-Merchán"
+      ],
+      "date": "2026-11-14",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Tests whether an LLM can infer a predictor from structured examples and write every network parameter as a literal number.",
+        "construction": "The model reasons from the supplied rows and emits a sealed vector of weights and biases before evaluation.",
+        "training": "Construction permits no optimizer, code execution, or trial evaluation; held-out data evaluates the frozen network.",
+        "execution": "The frozen network predicts unseen rows without the constructing LLM."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.19292",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.19292v2",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{zero-shot-structured-data,\n  title = {{Zero-Shot Weight-Space Programming for Prediction and Classification of Target Variables in Structured Datasets}},\n  author = {Garrido-Merchán, Eduardo C.},\n  year = {2026},\n  date = {2026-11-14},\n  eprint = {2611.19292},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.19292}\n}\n"
+    },
+    {
+      "id": "weight-space-tractor-control",
+      "title": "Weight-space programming for tractor guidance controller: large language models natively write neural network weights that steer a real tractor",
+      "authors": [
+        "Timo Oksanen"
+      ],
+      "date": "2026-11-16",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Uses LLM-written neural-network weights to repair and construct a tractor steering controller, with simulation and real-tractor evaluation.",
+        "construction": "The language model reasons about closed-loop dynamics and writes numerical controller parameters, using bounded simulation feedback.",
+        "training": "The weight-writing sessions use no gradient descent; the study compares their controllers with gradient-based and classical baselines.",
+        "execution": "The neural controller steers the tractor without the language model in the control loop."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.21958",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.21958v1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weight-space-tractor-control,\n  title = {{Weight-space programming for tractor guidance controller: large language models natively write neural network weights that steer a real tractor}},\n  author = {Oksanen, Timo},\n  year = {2026},\n  date = {2026-11-16},\n  eprint = {2611.21958},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.21958}\n}\n"
+    },
+    {
+      "id": "weight-space-diffusion-editing",
+      "title": "What Does Weight-Space Programming Add to Diffusion Editing? Program Construction versus Score-Guided Refinement",
+      "authors": [
+        "Zitian Gao",
+        "Jingyi Xu",
+        "Ziqi Han",
+        "Chengkai Lei",
+        "Ye Liu",
+        "Liangliang Shi"
+      ],
+      "date": "2026-11-17",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning",
+        "optimization"
+      ],
+      "operations": [
+        "edit"
+      ],
+      "artifacts": [
+        "program",
+        "code",
+        "network"
+      ],
+      "en": {
+        "summary": "Separates LLM program construction from score-guided refinement in diffusion concept editing.",
+        "construction": "The LLM writes code proposing update directions and protective contexts; a shared numerical fitter selects update coefficients.",
+        "training": "The pipeline includes numerical coefficient fitting and evaluation feedback. The paper tests generated programs against matched hand-written and search baselines.",
+        "execution": "The edited diffusion model generates images without the program-writing LLM."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.22228",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.22228v1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weight-space-diffusion-editing,\n  title = {{What Does Weight-Space Programming Add to Diffusion Editing? Program Construction versus Score-Guided Refinement}},\n  author = {Gao, Zitian and Xu, Jingyi and Han, Ziqi and Lei, Chengkai and Liu, Ye and Shi, Liangliang},\n  year = {2026},\n  date = {2026-11-17},\n  eprint = {2611.22228},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.22228}\n}\n"
+    },
+    {
+      "id": "weight-space-without-transformers",
+      "title": "Weight-Space Programming Doesn't Need Transformers",
+      "authors": [
+        "Hyunjong Ok",
+        "Jaeho Lee"
+      ],
+      "date": "2026-11-17",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Compares fixed transformers with architectures designed by LLM weight writers, including sparse tables and associative-memory models.",
+        "construction": "The LLM either writes weights for a fixed architecture or designs a forward computation and its parameters.",
+        "training": "The writing protocol excludes gradient training and fitting on data; a separate trained-model comparison is reported.",
+        "execution": "The written model answers inputs without the writing LLM."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.22055",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.22055v1",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/effl-lab/Weight-Space-Programming",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weight-space-without-transformers,\n  title = {{Weight-Space Programming Doesn't Need Transformers}},\n  author = {Ok, Hyunjong and Lee, Jaeho},\n  year = {2026},\n  date = {2026-11-17},\n  eprint = {2611.22055},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.22055}\n}\n"
+    },
+    {
+      "id": "weightcode",
+      "title": "WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming",
+      "authors": [
+        "Bo Li",
+        "Taoyong Cui",
+        "Bob Zhang",
+        "Mengran Li",
+        "Chengyang Zhang",
+        "Yang Zhang",
+        "Pheng Ann Heng",
+        "Wanli Ouyang",
+        "Zhenfei Yin",
+        "Yingcheng Wu",
+        "Ling Yang"
+      ],
+      "date": "2026-11-19",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "edit"
+      ],
+      "artifacts": [
+        "program",
+        "code",
+        "network"
+      ],
+      "en": {
+        "summary": "A frozen language model writes reusable programs that construct weight updates for trained networks.",
+        "construction": "The language model writes Python code that inspects the network and constructs weight changes, using evaluation feedback to select candidates.",
+        "training": "The main protocol uses direct computation and forward-pass feedback without gradient-based training; finite-difference experiments are reported separately.",
+        "execution": "The edited network runs without the language model. The retained code can construct new edits for compatible networks."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.25476",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.25476v1",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Gen-Verse/WeightCode",
+          "kind": "code"
+        },
+        {
+          "label": "Data and experiment artifacts",
+          "url": "https://huggingface.co/datasets/Boom5426/WeightCode",
+          "kind": "dataset"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{weightcode,\n  title = {{WeightCode: Installing New Capabilities into Neural Networks via Weight-Space Programming}},\n  author = {Li, Bo and Cui, Taoyong and Zhang, Bob and Li, Mengran and Zhang, Chengyang and Zhang, Yang and Heng, Pheng Ann and Ouyang, Wanli and Yin, Zhenfei and Wu, Yingcheng and Yang, Ling},\n  year = {2026},\n  date = {2026-11-19},\n  eprint = {2611.25476},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.25476}\n}\n"
+    },
+    {
+      "id": "honnibal-sparks-critique",
+      "title": "The 'Astra can read and write weights to improve Qwen' post is misleading",
+      "authors": [
+        "Matthew Honnibal"
+      ],
+      "date": "2026-11-03",
+      "kind": "critique",
+      "venue": "honnibal.dev",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [],
+      "en": {
+        "summary": "Separates the Sparks experiments by raw-weight access, Python tools and forward-pass feedback, and challenges presenting them as one capability.",
+        "construction": "Compares the setup and outcome of each reported experiment.",
+        "training": "Examines gradient-free protocols while distinguishing tool access and evaluation feedback.",
+        "execution": "Use the experiment-by-experiment comparison when interpreting the original claims."
+      },
+      "links": [
+        {
+          "label": "Original critique",
+          "url": "https://honnibal.dev/blog/astra-read-write-misleading",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{honnibal-sparks-critique,\n  title = {{The 'Astra can read and write weights to improve Qwen' post is misleading}},\n  author = {Honnibal, Matthew},\n  year = {2026},\n  date = {2026-11-03},\n  howpublished = {honnibal.dev},\n  url = {https://honnibal.dev/blog/astra-read-write-misleading}\n}\n"
+    },
+    {
+      "id": "goedecke-superhuman-critique",
+      "title": "LLMs are not superhuman at reading and writing neural network weights",
+      "authors": [
+        "Sean Goedecke"
+      ],
+      "date": "2026-11-03",
+      "kind": "critique",
+      "venue": "seangoedecke.com",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "edit"
+      ],
+      "artifacts": [],
+      "en": {
+        "summary": "Questions the superhuman-research interpretation of Sparks, examining input-layer heatmaps and the relationship between Qwen repair and established steering methods.",
+        "construction": "Uses input-layer weight heatmaps and a methodological comparison to explain the reported behaviors.",
+        "training": "Discusses direct edits and their relationship to conventional training; it does not report a new trained model.",
+        "execution": "Read alongside the original experiments and their authors’ response."
+      },
+      "links": [
+        {
+          "label": "Original critique",
+          "url": "https://www.seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{goedecke-superhuman-critique,\n  title = {{LLMs are not superhuman at reading and writing neural network weights}},\n  author = {Goedecke, Sean},\n  year = {2026},\n  date = {2026-11-03},\n  howpublished = {seangoedecke.com},\n  url = {https://www.seangoedecke.com/llms-are-not-superhuman-at-reading-and-writing-neural-network-weights/}\n}\n"
+    },
+    {
+      "id": "wsp-visual-tutorial",
+      "title": "Weight-Space Programming — From Neural Programs to Qwen Repair",
+      "authors": [
+        "AZ9713"
+      ],
+      "date": "",
+      "kind": "tutorial",
+      "venue": "Interactive tutorial",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "code"
+      ],
+      "en": {
+        "summary": "An illustrated walkthrough of network construction, raw-weight interpretation and Qwen repair, with labs based on released experiment artifacts.",
+        "construction": "Connects mathematical explanations to the Sparks experiments, released logs and published critiques.",
+        "training": "Explains the differences between direct parameter construction, training and feedback-assisted editing.",
+        "execution": "Work through the browser-based examples and follow the linked source artifacts."
+      },
+      "links": [
+        {
+          "label": "Interactive tutorial",
+          "url": "https://az9713.github.io/weight-space-programming/weight-space-programming-tutorial.html",
+          "kind": "guide"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{wsp-visual-tutorial,\n  title = {{Weight-Space Programming — From Neural Programs to Qwen Repair}},\n  author = {{AZ9713}},\n  howpublished = {Interactive tutorial},\n  url = {https://az9713.github.io/weight-space-programming/weight-space-programming-tutorial.html},\n  urldate = {2026-11-22}\n}\n"
+    },
+    {
+      "id": "awesome-wsp-boom5426",
+      "title": "Awesome Weight-Space Programming",
+      "authors": [
+        "Boom5426"
+      ],
+      "date": "",
+      "kind": "collection",
+      "venue": "GitHub collection",
+      "mechanisms": [
+        "trained",
+        "formal",
+        "reasoning",
+        "optimization"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [],
+      "en": {
+        "summary": "A bilingual collection covering direct weight programming and related research in generation, editing, merging and continual learning.",
+        "construction": "Organizes primary sources by research questions and provides an evidence matrix and evaluation guide.",
+        "training": "Distinguishes direct weight programming from trained generators and other related methods.",
+        "execution": "Use the collection to find papers, implementations and experimental comparisons."
+      },
+      "links": [
+        {
+          "label": "Curated collection",
+          "url": "https://github.com/Boom5426/Awesome-Weight-Space-Programming",
+          "kind": "guide"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{awesome-wsp-boom5426,\n  title = {{Awesome Weight-Space Programming}},\n  author = {{Boom5426}},\n  howpublished = {GitHub collection},\n  url = {https://github.com/Boom5426/Awesome-Weight-Space-Programming},\n  urldate = {2026-11-22}\n}\n"
+    },
+    {
+      "id": "awesome-wsp-brighterr",
+      "title": "Awesome Weight-Space Programming",
+      "authors": [
+        "brighterr"
+      ],
+      "date": "",
+      "kind": "collection",
+      "venue": "GitHub collection",
+      "mechanisms": [
+        "trained",
+        "formal",
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [],
+      "en": {
+        "summary": "A reading collection connecting direct weight programming, community experiments, compilers, weight generation and model editing.",
+        "construction": "Provides an introductory reading route and notes about the experimental conditions of linked work.",
+        "training": "Covers both gradient-free construction and the trained mechanisms that form related research lines.",
+        "execution": "Follow the reading paths, primary papers and linked code."
+      },
+      "links": [
+        {
+          "label": "Curated collection",
+          "url": "https://github.com/brighterr/awesome-wsp",
+          "kind": "guide"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{awesome-wsp-brighterr,\n  title = {{Awesome Weight-Space Programming}},\n  author = {{brighterr}},\n  howpublished = {GitHub collection},\n  url = {https://github.com/brighterr/awesome-wsp},\n  urldate = {2026-11-22}\n}\n"
+    },
+    {
+      "id": "wsp-agent-harnesses",
+      "title": "wsp — weight space programming",
+      "authors": [
+        "mfaseehuddin"
+      ],
+      "date": "",
+      "kind": "implementation",
+      "venue": "GitHub implementation",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "code",
+        "network"
+      ],
+      "en": {
+        "summary": "Community experiment harnesses, agent prompts and results for explaining, constructing and modifying neural-network weights.",
+        "construction": "Agents work through CLI harnesses with token budgets, hidden tests and recorded checks.",
+        "training": "Uses gradient-free weight-writing protocols inspired by Sparks; individual experiments specify their tool budgets.",
+        "execution": "The repository provides Python 3.12 and PyTorch setup instructions for CPU, CUDA and Apple MPS."
+      },
+      "links": [
+        {
+          "label": "Implementation and experiments",
+          "url": "https://github.com/mfaseehuddin/wsp",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{wsp-agent-harnesses,\n  title = {{wsp — weight space programming}},\n  author = {{mfaseehuddin}},\n  howpublished = {GitHub implementation},\n  url = {https://github.com/mfaseehuddin/wsp},\n  urldate = {2026-11-22}\n}\n"
+    },
+    {
+      "id": "fast-weight-memories",
+      "title": "Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks",
+      "authors": [
+        "Jürgen Schmidhuber"
+      ],
+      "date": "1992",
+      "kind": "paper",
+      "venue": "Neural Computation",
+      "mechanisms": [
+        "trained",
+        "optimization"
+      ],
+      "operations": [
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "An early weight-generating system: one network learns to change another network’s weights, using those changes as temporary memory.",
+        "construction": "A slow network produces context-dependent changes to the fast network’s connections.",
+        "training": "Gradient-based learning trains the controller to store and retrieve information through fast-weight updates.",
+        "execution": "The changing fast network processes temporal sequences and retains information in its connections."
+      },
+      "links": [
+        {
+          "label": "Paper and abstract",
+          "url": "https://people.idsia.ch/~juergen/fastweights/",
+          "kind": "paper"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@article{fast-weight-memories,\n  title = {{Learning to Control Fast-Weight Memories: An Alternative to Dynamic Recurrent Networks}},\n  author = {Schmidhuber, Jürgen},\n  year = {1992},\n  journal = {Neural Computation},\n  volume = {4},\n  number = {1},\n  pages = {131--139},\n  url = {https://people.idsia.ch/~juergen/fastweights/}\n}\n"
+    },
+    {
+      "id": "a-neural-compiler",
+      "title": "A Neural Compiler",
+      "authors": [
+        "Frédéric Gruau",
+        "Jean-Yves Ratajszczak",
+        "Gilles Wiber"
+      ],
+      "date": "1995",
+      "kind": "paper",
+      "venue": "Theoretical Computer Science",
+      "mechanisms": [
+        "formal"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Translates Pascal programs into neural networks that implement their computations.",
+        "construction": "The compiler converts source programs into cellular code, which builds the corresponding network by graph rewriting.",
+        "training": "Program compilation constructs the network rather than learning it from input-output examples.",
+        "execution": "The resulting network executes the compiled program, including variables, procedures and data structures."
+      },
+      "links": [
+        {
+          "label": "Full paper",
+          "url": "https://blob.lisn.upsaclay.fr/publication/tcs.pdf",
+          "kind": "paper"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@article{a-neural-compiler,\n  title = {{A Neural Compiler}},\n  author = {Gruau, Frédéric and Ratajszczak, Jean-Yves and Wiber, Gilles},\n  year = {1995},\n  journal = {Theoretical Computer Science},\n  url = {https://blob.lisn.upsaclay.fr/publication/tcs.pdf}\n}\n"
+    },
+    {
+      "id": "thinking-like-transformers",
+      "title": "Thinking Like Transformers",
+      "authors": [
+        "Gail Weiss",
+        "Yoav Goldberg",
+        "Eran Yahav"
+      ],
+      "date": "2021-06-13",
+      "kind": "paper",
+      "venue": "ICML 2021",
+      "mechanisms": [
+        "formal",
+        "optimization"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "program",
+        "network"
+      ],
+      "en": {
+        "summary": "Introduces RASP, a language for expressing sequence computations in terms of transformer operations.",
+        "construction": "RASP programs combine selection, aggregation and elementwise operations to describe algorithms such as sorting and histograms.",
+        "training": "The paper trains transformers to reproduce the programs. Tracr later provides a compiler that constructs transformer weights directly.",
+        "execution": "RASP executes the specified sequence transformation; the trained transformers are evaluated against that behavior."
+      },
+      "links": [
+        {
+          "label": "Published paper",
+          "url": "https://proceedings.mlr.press/v139/weiss21a.html",
+          "kind": "paper"
+        },
+        {
+          "label": "Original preprint",
+          "url": "https://arxiv.org/abs/2106.06981",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@inproceedings{thinking-like-transformers,\n  title = {{Thinking Like Transformers}},\n  author = {Weiss, Gail and Goldberg, Yoav and Yahav, Eran},\n  year = {2021},\n  booktitle = {Proceedings of the 38th International Conference on Machine Learning},\n  volume = {139},\n  pages = {11080--11090},\n  series = {Proceedings of Machine Learning Research},\n  publisher = {PMLR},\n  url = {https://proceedings.mlr.press/v139/weiss21a.html}\n}\n"
+    },
+    {
+      "id": "willison-local-weight-reading",
+      "title": "Qwen 3.8 27B on my laptop can interpret model weights, too",
+      "authors": [
+        "Simon Willison"
+      ],
+      "date": "2026-11-03",
+      "kind": "article",
+      "venue": "Simon Willison’s Weblog",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Re-runs the Sparks game-identification prompts with a local Qwen3.8 27B model, publishing commands and model responses.",
+        "construction": "The model receives numerical weights and architecture information, then identifies the game without executing the network.",
+        "training": "The session uses the existing general-purpose model without task-specific training.",
+        "execution": "Willison reports successful identification of Pac-Man, Pong and Breakout, and a failed Freeway example."
+      },
+      "links": [
+        {
+          "label": "Original article",
+          "url": "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{willison-local-weight-reading,\n  title = {{Qwen 3.8 27B on my laptop can interpret model weights, too}},\n  author = {Willison, Simon},\n  year = {2026},\n  date = {2026-11-03},\n  howpublished = {Simon Willison’s Weblog},\n  url = {https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/}\n}\n"
+    },
+    {
+      "id": "replicating-weight-space-programming",
+      "title": "Replicating and Extending Weight-Space Programming: Frontier LLMs Compile Programs into Weights and Read Input Layers",
+      "authors": [
+        "Roksana Goworek",
+        "Alexander Hickey",
+        "Federico Nanni",
+        "Martin O’Reilly"
+      ],
+      "date": "2026-11-16",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate"
+      ],
+      "artifacts": [
+        "network",
+        "code"
+      ],
+      "en": {
+        "summary": "Replicates weight construction and reading, then tests changed games, ordinary-code policies and shuffled-weight controls.",
+        "construction": "The LLM encodes game-playing algorithms into network weights; separate experiments test what information it extracts from trained networks.",
+        "training": "Construction uses the frontier model’s existing capabilities. Controlled comparisons separate algorithm design from training and weight interpretation.",
+        "execution": "The authors locate successful behavior in encoded algorithms and input-layer cues, and test where those strategies fail."
+      },
+      "links": [
+        {
+          "label": "Full paper",
+          "url": "https://borowiecki.dev/pdf/2611.21449",
+          "kind": "paper"
+        }
+      ],
+      "featured": true,
+      "bibtex": "@misc{replicating-weight-space-programming,\n  title = {{Replicating and Extending Weight-Space Programming: Frontier LLMs Compile Programs into Weights and Read Input Layers}},\n  author = {Goworek, Roksana and Hickey, Alexander and Nanni, Federico and O’Reilly, Martin},\n  year = {2026},\n  date = {2026-11-16},\n  eprint = {2611.21449},\n  archivePrefix = {arXiv},\n  url = {https://borowiecki.dev/pdf/2611.21449}\n}\n"
+    },
+    {
+      "id": "sparks-response-to-comments",
+      "title": "Sparks of Weight-Space Programming: Response to Comments",
+      "authors": [
+        "Rikiya Takehi",
+        "Jayden Teoh",
+        "Alex Zhang",
+        "Omar Khattab"
+      ],
+      "date": "2026-11-12",
+      "kind": "article",
+      "venue": "Update to Sparks of Weight-Space Programming",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "generate",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "The authors’ response distinguishes weight-space programming as a capability from any single experimental method.",
+        "construction": "Explains why raw-weight reasoning, Python-assisted analysis and feedback-assisted editing belong to the same proposed research direction.",
+        "training": "Clarifies tool use and gradient-free experiments while discussing the broader role of learning and optimization.",
+        "execution": "Addresses MinAtar baselines and Qwen repair, and distinguishes the reported results from a comparison against human researchers."
+      },
+      "links": [
+        {
+          "label": "Response in the original article",
+          "url": "https://rikiyat.github.io/blog/weight-space-programming/",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{sparks-response-to-comments,\n  title = {{Sparks of Weight-Space Programming: Response to Comments}},\n  author = {Takehi, Rikiya and Teoh, Jayden and Zhang, Alex and Khattab, Omar},\n  year = {2026},\n  date = {2026-11-12},\n  howpublished = {Update to Sparks of Weight-Space Programming},\n  url = {https://rikiyat.github.io/blog/weight-space-programming/}\n}\n"
+    }
+  ]
+}
