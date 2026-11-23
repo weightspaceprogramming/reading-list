@@ -13,6 +13,7 @@ An annotated collection of research on representing and constructing programs in
 - [Choose a reading path](https://weightspaceprogramming.tech/learn/reading-paths/) — routes through the literature.
 - [Research history](https://weightspaceprogramming.tech/history/) — contributions, dates and original sources.
 - [Build a reusable neural function](https://weightspaceprogramming.tech/build/reusable-neural-function/) — a Program-as-Weights example with a [playground](https://programasweights.com/playground).
+- [Run the examples](https://github.com/weightspaceprogramming/examples) — a Tracr token counter and PAW urgency, routing and composition examples.
 
 ## Contents
 

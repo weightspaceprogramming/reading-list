@@ -74,6 +74,7 @@ def markdown(data):
         f"- [Choose a reading path]({GUIDE}/learn/reading-paths/) — routes through the literature.",
         f"- [Research history]({GUIDE}/history/) — contributions, dates and original sources.",
         f"- [Build a reusable neural function]({GUIDE}/build/reusable-neural-function/) — a Program-as-Weights example with a [playground](https://programasweights.com/playground).",
+        "- [Run the examples](https://github.com/weightspaceprogramming/examples) — a Tracr token counter and PAW urgency, routing and composition examples.",
         "",
         "## Contents",
         "",
