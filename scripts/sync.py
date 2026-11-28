@@ -12,11 +12,11 @@ GUIDE = "https://weightspaceprogramming.tech"
 
 GROUPS = [
     ("Foundations and formal compilation", [
-        "fast-weight-memories", "a-neural-compiler", "thinking-like-transformers", "tracr",
+        "fast-weight-memories", "a-neural-compiler", "thinking-like-transformers", "tracr", "spec2weights",
     ]),
     ("Trained compilers and weight generators", [
         "hypernetworks", "hypter", "hypertuning", "hint", "text-to-lora",
-        "code-to-lora", "program-as-weights", "compile-by-training",
+        "code-to-lora", "program-as-weights", "compile-by-training", "video-as-weights", "latent-merger",
     ]),
     ("LLM reasoning over weights and experimental feedback", [
         "sparks-weight-space-programming", "weight-space-programming-simple-tasks",
@@ -28,11 +28,22 @@ GROUPS = [
     ("Replications, criticism and responses", [
         "honnibal-sparks-critique", "goedecke-superhuman-critique", "willison-local-weight-reading",
         "weight-reading-audit", "sparks-response-to-comments", "replicating-weight-space-programming",
+        "blind-weight-editing", "compile-learn-or-both",
     ]),
     ("Tutorials, tools and collections", [
         "wsp-visual-tutorial", "wsp-agent-harnesses", "awesome-wsp-boom5426", "awesome-wsp-brighterr",
     ]),
 ]
+
+
+# Include the detail that explains how each method differs from related work.
+ENTRY_DETAILS = {
+    "spec2weights": "construction",
+    "video-as-weights": "construction",
+    "latent-merger": "execution",
+    "blind-weight-editing": "execution",
+    "compile-learn-or-both": "execution",
+}
 
 
 def validate(data):
@@ -89,6 +100,9 @@ def markdown(data):
         for entry_id in ids:
             entry = entries[entry_id]
             primary = next((link for link in entry["links"] if link["kind"] == "paper"), entry["links"][0])
+            description = entry["en"]["summary"]
+            if entry_id in ENTRY_DETAILS:
+                description += " " + entry["en"][ENTRY_DETAILS[entry_id]]
             text.extend([
                 f"### [{entry['title']}]({primary['url']})",
                 "",
@@ -96,7 +110,7 @@ def markdown(data):
                 "",
                 " · ".join(value for value in [entry.get("venue"), entry.get("date")] if value),
                 "",
-                entry["en"]["summary"],
+                description,
                 "",
                 " · ".join([f"[{link['label']}]({link['url']})" for link in entry["links"]] + [f"[Research profile]({GUIDE}/research/{entry_id}/)"]),
                 "",

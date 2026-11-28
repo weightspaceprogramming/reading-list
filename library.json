@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23",
+  "updated": "2026-11-28",
   "entries": [
     {
       "id": "hypernetworks",
@@ -1673,6 +1673,248 @@
           "html": "<p>Keel and <a href=\"/research/program-as-weights/\">PAW</a> change model behavior through weights. PAW specifically trains a neural compiler to generate LoRA adapters that edit a frozen interpreter’s weights from a function specification. Keel uses a general-purpose multimodal LLM, not specifically trained for this purpose, to diagnose failures and write weight repairs through an interactive editing session.</p>"
         }
       ]
+    },
+    {
+      "id": "spec2weights",
+      "title": "Spec2Weights: Certifying Networks that a Language Model Writes from a Specification",
+      "authors": [
+        "Soumik Bhattacharjee",
+        "Musa Tur Farazi",
+        "Md Nasir Uddin",
+        "Tishna Sabrina",
+        "Chowdhury Mohammad Rakin Haider"
+      ],
+      "date": "2026-11-25",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning",
+        "formal"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "network",
+        "code"
+      ],
+      "en": {
+        "summary": "A language model writes the weights of a small network from a specification. A certificate proves which inputs it handles exactly in float32.",
+        "construction": "The writer produces Python that sets the weights. Section 2 cites Program-as-Weights for compiling fuzzy functions.",
+        "training": "The writer uses no training examples or gradient updates. The authors also train the same architectures by gradient descent.",
+        "execution": "On 30 new specifications, 25 first submissions were certified exact for every allowed summation order."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.34711",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.34711v1",
+          "kind": "source"
+        },
+        {
+          "label": "PAW citation",
+          "url": "https://arxiv.org/html/2611.34711v1#S2.SS0.SSS0.Px1.p1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{spec2weights,\n  title = {{Spec2Weights: Certifying Networks that a Language Model Writes from a Specification}},\n  author = {Bhattacharjee, Soumik and Farazi, Musa Tur and Uddin, Md Nasir and Sabrina, Tishna and Haider, Chowdhury Mohammad Rakin},\n  year = {2026},\n  date = {2026-11-25},\n  eprint = {2611.34711},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.34711}\n}\n"
+    },
+    {
+      "id": "video-as-weights",
+      "title": "Video-as-Weights: Compiling a Video Once into Parametric and Token Memory",
+      "authors": [
+        "Wentao Zhang",
+        "Ian Miao",
+        "Chen Qu",
+        "Bill Bi",
+        "Donna Schut",
+        "Yuntian Deng",
+        "Yale Song"
+      ],
+      "date": "2026-11-20",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "A compiler watches a video once and generates LoRA weights and optional prefix tokens for a frozen vision-language model.",
+        "construction": "Section 3.1 credits Program-as-Weights as the inspiration for the compiler and interpreter. Here the compiler reads a video before seeing any question.",
+        "training": "Each training example uses the same generated weights twice, once with the prefix tokens and once without them.",
+        "execution": "Across six video question-answering benchmarks, the 0.8B interpreter with a 9B compiler outscored the same interpreter reading the full video by 4.3 percentage points in accuracy."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.28221",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.28221v1",
+          "kind": "source"
+        },
+        {
+          "label": "PAW citation",
+          "url": "https://arxiv.org/html/2611.28221v1#S3.SS1.SSS0.Px1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{video-as-weights,\n  title = {{Video-as-Weights: Compiling a Video Once into Parametric and Token Memory}},\n  author = {Zhang, Wentao and Miao, Ian and Qu, Chen and Bi, Bill and Schut, Donna and Deng, Yuntian and Song, Yale},\n  year = {2026},\n  date = {2026-11-20},\n  eprint = {2611.28221},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.28221}\n}\n"
+    },
+    {
+      "id": "latent-merger",
+      "title": "Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs",
+      "authors": [
+        "Yanlai Yang",
+        "Minki Kang",
+        "Divyam Madaan",
+        "Sung Ju Hwang",
+        "Mengye Ren"
+      ],
+      "date": "2026-11-24",
+      "kind": "paper",
+      "venue": "NeurIPS 2026",
+      "mechanisms": [
+        "trained"
+      ],
+      "operations": [
+        "generate"
+      ],
+      "artifacts": [
+        "adapter"
+      ],
+      "en": {
+        "summary": "Latent Merger combines several documents into one fixed-rank LoRA adapter for a frozen language model.",
+        "construction": "A hypernetwork encodes each document separately. The merger combines the encodings before the frozen output head generates the adapter.",
+        "training": "The authors train the merger by matching output distributions. Document order does not change its output.",
+        "execution": "On two-document SQuAD with Doc-to-LoRA, Latent Merger scored 50.7 F1. Averaging the encodings scored 47.6 and compressing the combined adapters with SVD scored 48.5."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.33048",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.33048v1",
+          "kind": "source"
+        },
+        {
+          "label": "Project",
+          "url": "https://agenticlearning.ai/latent-merger/",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/agentic-learning-ai-lab/latent-merger",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@inproceedings{latent-merger,\n  title = {{Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs}},\n  author = {Yang, Yanlai and Kang, Minki and Madaan, Divyam and Hwang, Sung Ju and Ren, Mengye},\n  year = {2026},\n  date = {2026-11-24},\n  booktitle = {Advances in Neural Information Processing Systems},\n  eprint = {2611.33048},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.33048}\n}\n"
+    },
+    {
+      "id": "blind-weight-editing",
+      "title": "Where Does a Weight-Editing Agent Help? Blind Diagnosis and Repair of Deployment Faults in Vision Models",
+      "authors": [
+        "Zhuangzi Li",
+        "Shilv Cai",
+        "Jian Jin",
+        "Weisi Lin"
+      ],
+      "date": "2026-11-21",
+      "kind": "paper",
+      "venue": "arXiv",
+      "mechanisms": [
+        "reasoning"
+      ],
+      "operations": [
+        "read",
+        "edit"
+      ],
+      "artifacts": [
+        "network"
+      ],
+      "en": {
+        "summary": "Can an agent diagnose a deployed vision model without being told what went wrong? The authors test four models with hidden faults and fault-free controls.",
+        "construction": "The agent inspects weights, example inputs and forward-pass statistics, then chooses whether to repair the model.",
+        "training": "The agent edits without gradients. The authors compare it with fixed scripts, including a script written after inspecting the agent’s solutions.",
+        "execution": "Across five fault types the scripts did not cover, the agent repaired all 15 cases. The retrospective script repaired four. The agent left all 21 fault-free controls alone."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/abs/2611.28781",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://arxiv.org/html/2611.28781v1",
+          "kind": "source"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{blind-weight-editing,\n  title = {{Where Does a Weight-Editing Agent Help? Blind Diagnosis and Repair of Deployment Faults in Vision Models}},\n  author = {Li, Zhuangzi and Cai, Shilv and Jin, Jian and Lin, Weisi},\n  year = {2026},\n  date = {2026-11-21},\n  eprint = {2611.28781},\n  archivePrefix = {arXiv},\n  url = {https://arxiv.org/abs/2611.28781}\n}\n"
+    },
+    {
+      "id": "compile-learn-or-both",
+      "title": "Compile, Learn, or Both? When Weight-Space Programming Helps, What It Breaks, and Why Combining It with LoRA Matters",
+      "authors": [
+        "Puneet Bajaj"
+      ],
+      "date": "2026-11-25",
+      "kind": "paper",
+      "venue": "Zenodo",
+      "mechanisms": [
+        "reasoning",
+        "optimization"
+      ],
+      "operations": [
+        "edit"
+      ],
+      "artifacts": [
+        "network",
+        "adapter"
+      ],
+      "en": {
+        "summary": "This study compares an agent writing weights, LoRA fine-tuning and LoRA trained on top of a programmed memory.",
+        "construction": "The agent writes circuits into Qwen2.5-1.5B. Some bypass the rest of the model: one recalled all 900 fictional facts while MMLU accuracy fell from 59.6% to 22.2%.",
+        "training": "A second design preserves the model’s general abilities. Bajaj uses this programmed memory as the starting point for LoRA training.",
+        "execution": "After 4,000 total exposures to the 900 facts, the combined models scored 99.0–99.7% on the facts and 58.0–59.6% on MMLU. LoRA alone scored 22.2% on the facts."
+      },
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://doi.org/10.5281/zenodo.24530420",
+          "kind": "paper"
+        },
+        {
+          "label": "Full text",
+          "url": "https://puneetbajaj.dev/papers/compile-learn-or-both/",
+          "kind": "source"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/Puneet-Bajaj-IITM/wsp-vs-lora",
+          "kind": "code"
+        }
+      ],
+      "featured": false,
+      "bibtex": "@misc{compile-learn-or-both,\n  title = {{Compile, Learn, or Both? When Weight-Space Programming Helps, What It Breaks, and Why Combining It with LoRA Matters}},\n  author = {Bajaj, Puneet},\n  year = {2026},\n  date = {2026-11-25},\n  publisher = {Zenodo},\n  version = {1.1.2},\n  doi = {10.5281/zenodo.24530420},\n  url = {https://doi.org/10.5281/zenodo.24530420}\n}\n"
     }
   ]
 }

@@ -4,7 +4,7 @@ An annotated collection of research on representing and constructing programs in
 
 [Read the guide](https://weightspaceprogramming.tech/) · [Search the collection](https://weightspaceprogramming.tech/research/) · [BibTeX](citations.bib) · [JSON](library.json) · [Dated releases](https://github.com/weightspaceprogramming/reading-list/releases)
 
-36 resources. Updated 2026-11-23.
+41 resources. Updated 2026-11-28.
 
 ## Start here
 
@@ -67,6 +67,16 @@ NeurIPS 2023 · 2023-01-12
 Compiles RASP programs into transformer weights with known computational structure.
 
 [Paper](https://arxiv.org/abs/2301.05062) · [Full text](https://arxiv.org/html/2301.05062) · [Code](https://github.com/google-deepmind/tracr) · [Research profile](https://weightspaceprogramming.tech/research/tracr/)
+
+### [Spec2Weights: Certifying Networks that a Language Model Writes from a Specification](https://arxiv.org/abs/2611.34711)
+
+Soumik Bhattacharjee, Musa Tur Farazi, Md Nasir Uddin, Tishna Sabrina, Chowdhury Mohammad Rakin Haider.
+
+arXiv · 2026-11-25
+
+A language model writes the weights of a small network from a specification. A certificate proves which inputs it handles exactly in float32. The writer produces Python that sets the weights. Section 2 cites Program-as-Weights for compiling fuzzy functions.
+
+[Paper](https://arxiv.org/abs/2611.34711) · [Full text](https://arxiv.org/html/2611.34711v1) · [PAW citation](https://arxiv.org/html/2611.34711v1#S2.SS0.SSS0.Px1.p1) · [Research profile](https://weightspaceprogramming.tech/research/spec2weights/)
 
 ## Trained compilers and weight generators
 
@@ -149,6 +159,26 @@ EMNLP 2026 System Demonstrations · 2026-09-03
 Compiles a function description into a reusable local program by generating training examples and optimizing an adapter.
 
 [Paper](https://aclanthology.org/2026.emnlp-demos.78/) · [Code](https://github.com/programasweights/compile-by-training) · [Original full text](https://arxiv.org/html/2609.04199v1) · [Research profile](https://weightspaceprogramming.tech/research/compile-by-training/)
+
+### [Video-as-Weights: Compiling a Video Once into Parametric and Token Memory](https://arxiv.org/abs/2611.28221)
+
+Wentao Zhang, Ian Miao, Chen Qu, Bill Bi, Donna Schut, Yuntian Deng, Yale Song.
+
+arXiv · 2026-11-20
+
+A compiler watches a video once and generates LoRA weights and optional prefix tokens for a frozen vision-language model. Section 3.1 credits Program-as-Weights as the inspiration for the compiler and interpreter. Here the compiler reads a video before seeing any question.
+
+[Paper](https://arxiv.org/abs/2611.28221) · [Full text](https://arxiv.org/html/2611.28221v1) · [PAW citation](https://arxiv.org/html/2611.28221v1#S3.SS1.SSS0.Px1) · [Research profile](https://weightspaceprogramming.tech/research/video-as-weights/)
+
+### [Latent Merger: Latent-Space Composition of Hypernetwork-Generated LoRAs](https://arxiv.org/abs/2611.33048)
+
+Yanlai Yang, Minki Kang, Divyam Madaan, Sung Ju Hwang, Mengye Ren.
+
+NeurIPS 2026 · 2026-11-24
+
+Latent Merger combines several documents into one fixed-rank LoRA adapter for a frozen language model. On two-document SQuAD with Doc-to-LoRA, Latent Merger scored 50.7 F1. Averaging the encodings scored 47.6 and compressing the combined adapters with SVD scored 48.5.
+
+[Paper](https://arxiv.org/abs/2611.33048) · [Full text](https://arxiv.org/html/2611.33048v1) · [Project](https://agenticlearning.ai/latent-merger/) · [Code](https://github.com/agentic-learning-ai-lab/latent-merger) · [Research profile](https://weightspaceprogramming.tech/research/latent-merger/)
 
 ## LLM reasoning over weights and experimental feedback
 
@@ -353,6 +383,26 @@ arXiv · 2026-11-16
 Replicates weight construction and reading, then tests changed games, ordinary-code policies and shuffled-weight controls.
 
 [Full paper](https://borowiecki.dev/pdf/2611.21449) · [Research profile](https://weightspaceprogramming.tech/research/replicating-weight-space-programming/)
+
+### [Where Does a Weight-Editing Agent Help? Blind Diagnosis and Repair of Deployment Faults in Vision Models](https://arxiv.org/abs/2611.28781)
+
+Zhuangzi Li, Shilv Cai, Jian Jin, Weisi Lin.
+
+arXiv · 2026-11-21
+
+Can an agent diagnose a deployed vision model without being told what went wrong? The authors test four models with hidden faults and fault-free controls. Across five fault types the scripts did not cover, the agent repaired all 15 cases. The retrospective script repaired four. The agent left all 21 fault-free controls alone.
+
+[Paper](https://arxiv.org/abs/2611.28781) · [Full text](https://arxiv.org/html/2611.28781v1) · [Research profile](https://weightspaceprogramming.tech/research/blind-weight-editing/)
+
+### [Compile, Learn, or Both? When Weight-Space Programming Helps, What It Breaks, and Why Combining It with LoRA Matters](https://doi.org/10.5281/zenodo.24530420)
+
+Puneet Bajaj.
+
+Zenodo · 2026-11-25
+
+This study compares an agent writing weights, LoRA fine-tuning and LoRA trained on top of a programmed memory. After 4,000 total exposures to the 900 facts, the combined models scored 99.0–99.7% on the facts and 58.0–59.6% on MMLU. LoRA alone scored 22.2% on the facts.
+
+[Paper](https://doi.org/10.5281/zenodo.24530420) · [Full text](https://puneetbajaj.dev/papers/compile-learn-or-both/) · [Code](https://github.com/Puneet-Bajaj-IITM/wsp-vs-lora) · [Research profile](https://weightspaceprogramming.tech/research/compile-learn-or-both/)
 
 ## Tutorials, tools and collections
 
